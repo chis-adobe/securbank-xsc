@@ -5,8 +5,8 @@ export default async function decorate(block) {
   const aempublishurl = getAEMPublish();
   const aemauthorurl = getAEMAuthor();
   const persistedquery = '/graphql/execute.json/securbank/OfferByPath';
-  const offerpath = block.querySelector(':scope div:nth-child(1) > div a').innerHTML.trim();
-  let variationname = block.querySelector(':scope div:nth-child(2) > div').innerHTML.trim();
+  const offerpath = block.querySelector(':scope div:nth-child(1) > div a').textContent.trim();
+  let variationname = block.querySelector(':scope div:nth-child(2) > div').textContent.trim();
   if (!variationname) {
     variationname = 'main';
   }
